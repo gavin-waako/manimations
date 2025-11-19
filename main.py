@@ -1,10 +1,8 @@
 from manim import *
 
-class SquareToCircle(Scene):
+
+class CreateCircle(Scene):
     def construct(self):
-        circle = Circle()
-        square = Square()
-        square.flip(RIGHT)
-        self.play(ShowCreation(square))
-        self.play(FadeOut(square), ShowCreation(circle))
-        self.wait(1)
+        circle = Circle()  # create a circle
+        circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
+        self.play(Create(circle))  # show the circle on screen
