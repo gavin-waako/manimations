@@ -11,7 +11,7 @@ class PascalTriangleExplainer(Scene):
         ROWS_TO_SHOW = 6  # Rows 0 through 5
 
         # --- 0. Student & Class Intro ---
-        student_name = Text("Presented by Rob Deniro", font_size=48, color=YELLOW)
+        student_name = Text("Presented by Gavin Waako", font_size=48, color=YELLOW)
         class_name = Text("Intro to Computation", font_size=40, color=BLUE_B)
         
         intro_group = VGroup(student_name, class_name).arrange(DOWN, buff=0.5)
@@ -22,7 +22,8 @@ class PascalTriangleExplainer(Scene):
 
         # --- 1. Introduction ---
         title = MathTex(
-            r"\text{Pascal's Triangle}", r"\text{ \& The Binomial Theorem}", 
+            r"\text{Commonly used in }", 
+            r"\text{Binomial Theorem}", 
             font_size=64, 
             color=BLUE
         ).scale(1.2)
@@ -60,7 +61,8 @@ class PascalTriangleExplainer(Scene):
         self.wait(1.0)
 
         # --- 3. Explain the Summation Rules ---
-        explanation_text = Text("Rule: The sum of two adjacent numbers forms the number directly below them.", font_size=32).to_edge(DOWN)
+        
+        explanation_text = Text("To find any number, find the sum of the 2 numbers above it.", font_size=32).to_edge(DOWN)
         self.play(Write(explanation_text))
         self.wait(1.0)
         
@@ -198,7 +200,6 @@ class PascalTriangleExplainer(Scene):
         )
 
         final_message = VGroup(
-            Text("Pascal's Triangle: Simple Rule, Deep Connections.", font_size=48, color=GREEN_B),
             Text("Thank you for watching!", font_size=36, color=YELLOW)
         ).arrange(DOWN, buff=0.8)
 
